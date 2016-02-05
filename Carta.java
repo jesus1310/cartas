@@ -41,4 +41,20 @@ public class Carta
         }
         return nombre;
     }
+    
+    /**
+     * Devuelve el valor de la carta
+     */
+    public int getValor()
+    {
+        return valor;
+    }
+    
+    /**
+     * Devuelve el palo de la carta
+     */
+    public String getPalo()
+    {
+        return palo;
+    }    
 }
