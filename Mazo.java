@@ -9,11 +9,11 @@ import java.util.Collections;
  */
 public class Mazo
 {
-    // Almacena todas las cartas de la baraja
+    // Almacena todas las cartas del mazo
     private ArrayList<Carta> baraja;
 
     /**
-     * Constructor for objects of class Mazo
+     * Constructor de la clase Mazo
      */
     public Mazo()
     {
@@ -43,13 +43,24 @@ public class Mazo
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Baraja el mazo de cartas.
      */
     public void barajar()
     {
         Collections.shuffle(baraja);
     }
+    
+    /**
+     * Retorna la primera carta del mazo y modifica el estado del mazo para reflejar que esa carta ya no se encuentra en el mazo.
+     * En caso de que no queden cartas en el mazo devuelve null.
+     */
+    public Carta tomarPrimera()
+    {
+        Carta cartaTomada = null;
+        if (baraja.size() > 0) {
+            cartaTomada = baraja.get(0);
+            baraja.remove(0);
+            }
+        return cartaTomada;
+    }        
 }
