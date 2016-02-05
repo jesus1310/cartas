@@ -21,7 +21,7 @@ public class Mazo
         int index = 0;
         int numero = 1;
         String paloDeCarta = "Picas";
-        
+
         while (index < 52) {
             Carta cartaNueva = new Carta(numero, paloDeCarta);
             baraja.add(cartaNueva);
@@ -49,7 +49,7 @@ public class Mazo
     {
         Collections.shuffle(baraja);
     }
-    
+
     /**
      * Retorna la primera carta del mazo y modifica el estado del mazo para reflejar que esa carta ya no se encuentra en el mazo.
      * En caso de que no queden cartas en el mazo devuelve null.
@@ -60,7 +60,7 @@ public class Mazo
         if (baraja.size() > 0) {
             cartaTomada = baraja.get(0);
             baraja.remove(0);
-            }
+        }
         return cartaTomada;
     }        
 }

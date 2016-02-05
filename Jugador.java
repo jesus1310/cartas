@@ -10,7 +10,7 @@ public class Jugador
 {
     // Atributo que contiene el identificador del jugador
     private int id;
-    // ArrayList que almacena el nombre completo de las cartas que tiene el jugador en la mano
+    // ArrayList que almacena las cartas que tiene el jugador en la mano
     private ArrayList<String> cartasEnMano;
     
     /**
@@ -27,5 +27,19 @@ public class Jugador
      */
     public int getId(){
         return id;
+    }
+    
+    /**
+     * Metodo que agrega una carta a las que posee el jugador
+     */
+    public void recibirCarta(Carta unaCarta){
+        cartasEnMano.add(unaCarta.getNombre());
+    }
+    
+    /**
+     * Método que devuelve un ArrayList con los nombres de las cartas
+     */
+    public ArrayList cartasQueTieneEnLaMano(){
+        return cartasEnMano;
     }
 }
