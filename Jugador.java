@@ -21,4 +21,11 @@ public class Jugador
         this.id = id;
         cartasEnMano = new ArrayList<>();
     }
+    
+    /**
+     * Método que devuelve el identificador del jugador
+     */
+    public int getId(){
+        return id;
+    }
 }
