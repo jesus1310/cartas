@@ -1,3 +1,4 @@
+import java.util.Arraylist;
 
 /**
  * Write a description of class Mazo here.
