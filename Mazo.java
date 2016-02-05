@@ -1,4 +1,5 @@
-import java.util.Arraylist;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Write a description of class Mazo here.
@@ -8,16 +9,37 @@ import java.util.Arraylist;
  */
 public class Mazo
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Almacena todas las cartas de la baraja
+    private ArrayList<Carta> baraja;
 
     /**
      * Constructor for objects of class Mazo
      */
     public Mazo()
     {
-        // initialise instance variables
-        x = 0;
+        baraja = new ArrayList<Carta>();
+        int index = 0;
+        int numero = 1;
+        String paloDeCarta = "Picas";
+        
+        while (index < 52) {
+            Carta cartaNueva = new Carta(numero, paloDeCarta);
+            baraja.add(cartaNueva);
+            if (index == 12) {
+                paloDeCarta = "Corazones";
+                numero = 0;
+            }
+            else if (index == 25) {
+                paloDeCarta = "Diamantes";
+                numero = 0;
+            }
+            else if (index == 38) {
+                paloDeCarta = "Treboles";
+                numero = 0;
+            }
+            index++;
+            numero++;
+        }
     }
 
     /**
@@ -26,9 +48,8 @@ public class Mazo
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public void barajar()
     {
-        // put your code here
-        return x + y;
+        Collections.shuffle(baraja);
     }
 }
