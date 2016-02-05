@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class Jugador here.
@@ -7,15 +8,24 @@
  */
 public class Jugador
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    // Atributo que contiene el identificador del jugador
+    private int id;
+    // ArrayList que almacena el nombre completo de las cartas que tiene el jugador en la mano
+    private ArrayList<String> cartasEnMano;
+    
     /**
      * Constructor for objects of class Jugador
      */
-    public Jugador()
+    public Jugador(int id)
     {
-        // initialise instance variables
-        x = 0;
+        this.id = id;
+        cartasEnMano = new ArrayList<>();
+    }
+    
+    /**
+     * Método que devuelve el identificador del jugador
+     */
+    public int getId(){
+        return id;
     }
 }
