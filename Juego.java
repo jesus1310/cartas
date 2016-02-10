@@ -23,10 +23,10 @@ public class Juego
         jugadores = new ArrayList<>();
         int id = 1;
         if (numeroDeJugadores < 2 || numeroDeJugadores > 8){
-            jugadores.add(new Jugador(1));
-            jugadores.add(new Jugador(2));
-            jugadores.add(new Jugador(3));
-            jugadores.add(new Jugador(4));
+            while (id <= 4){
+                jugadores.add(new Jugador(id));
+                id = id + 1;
+            }
         }
         else {
             while (id <= numeroDeJugadores){
